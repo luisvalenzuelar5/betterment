@@ -1,21 +1,39 @@
-<form class="registration-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm.value)">
-  <mat-form-field class="registration-form__field">
-    <input matInput formControlName="firstName" placeholder="First Name">
-  </mat-form-field>
-  <mat-form-field class="registration-form__field">
-    <input matInput formControlName="lastName" placeholder="Last Name">
-  </mat-form-field>
-  <mat-form-field class="registration-form__field">
-    <input matInput formControlName="email" placeholder="Email">
-  </mat-form-field>
-  <mat-form-field class="registration-form__field">
-    <input matInput formControlName="role" placeholder="Role">
-  </mat-form-field>
-  <mat-form-field class="registration-form__field">
-    <input matInput formControlName="location" placeholder="Location">
-  </mat-form-field>
-  <mat-checkbox class="registration-form__check" formControlName="toastMasters">Toast Masters</mat-checkbox>
-  <mat-checkbox class="registration-form__check" formControlName="toastMasters">Women of Republic</mat-checkbox>
+<mat-horizontal-stepper [linear]="true" #stepper>
+  <mat-step [stepControl]="registrationForm">
+    <ng-template matStepLabel>User Registration</ng-template>
+    <form class="registration-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm.value)">
+      <mat-form-field class="registration-form__field">
+        <input matInput formControlName="first_name" placeholder="First Name">
+      </mat-form-field>
+      <mat-form-field class="registration-form__field">
+        <input matInput formControlName="last_name" placeholder="Last Name">
+      </mat-form-field>
+      <mat-form-field class="registration-form__field">
+        <input matInput formControlName="email" placeholder="Email">
+      </mat-form-field>
+      <mat-form-field class="registration-form__field">
+        <input matInput formControlName="role" placeholder="Role">
+      </mat-form-field>
+      <mat-form-field class="registration-form__field">
+        <input matInput formControlName="location" placeholder="Location">
+      </mat-form-field>
+      <mat-checkbox class="registration-form__check" formControlName="toast_masters">Toast Masters</mat-checkbox>
+      <mat-checkbox class="registration-form__check" formControlName="women_of_republic">Women of Republic</mat-checkbox>
 
-  <button class="registration-form__submit-button" mat-raised-button color="accent" type="submit">Next</button>
-</form>
+      <button class="registration-form__submit-button" mat-raised-button color="accent" type="submit">Next</button>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="registrationForm">
+    <ng-template matStepLabel>Count Me In</ng-template>
+    <form class="registration-form" [formGroup]="registrationForm">
+      <p>
+        Mentoring not only benefits the employee, but also the mentor, and will have positive long-term advantages for
+        all involved!
+      </p>
+      <p>Count on me- I want to be involved in BetterMENT as a</p>
+      <mat-checkbox class="registration-form__check" formControlName="is_mentor">Mentor </mat-checkbox>
+      <mat-checkbox class="registration-form__check" formControlName="is_mentee">Mentee</mat-checkbox>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>

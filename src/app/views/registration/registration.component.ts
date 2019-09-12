@@ -11,13 +11,15 @@ import { User } from '../../interfaces/user';
 export class RegistrationComponent implements OnInit {
   registrationForm;
   newUserInfo = {
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     email: '',
-    toastMasters: false,
-    womenOfRepublic: false,
+    toast_masters: false,
+    women_of_republic: false,
     role: '',
     location: '',
+    is_mentor: false,
+    is_mentee: false,
     photo: '' ,
     badges: []
   } as User;

@@ -1,11 +1,13 @@
 export interface User {
-    firstName: string;
-    lastName: string;
+    first_name: string;
+    last_name: string;
     email: '';
-    toastMasters: boolean;
-    womenOfRepublic: boolean;
+    toast_masters: boolean;
+    women_of_republic: boolean;
     role: string;
     location: string;
+    is_mentor: boolean;
+    is_mentee: boolean;
     photo: any;
     badges: any;
 }
