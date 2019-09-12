@@ -1,0 +1,21 @@
+<form class="registration-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm.value)">
+  <mat-form-field class="registration-form__field">
+    <input matInput formControlName="firstName" placeholder="First Name">
+  </mat-form-field>
+  <mat-form-field class="registration-form__field">
+    <input matInput formControlName="lastName" placeholder="Last Name">
+  </mat-form-field>
+  <mat-form-field class="registration-form__field">
+    <input matInput formControlName="email" placeholder="Email">
+  </mat-form-field>
+  <mat-form-field class="registration-form__field">
+    <input matInput formControlName="role" placeholder="Role">
+  </mat-form-field>
+  <mat-form-field class="registration-form__field">
+    <input matInput formControlName="location" placeholder="Location">
+  </mat-form-field>
+  <mat-checkbox class="registration-form__check" formControlName="toastMasters">Toast Masters</mat-checkbox>
+  <mat-checkbox class="registration-form__check" formControlName="toastMasters">Women of Republic</mat-checkbox>
+
+  <button class="registration-form__submit-button" mat-raised-button color="accent" type="submit">Next</button>
+</form>

@@ -11,9 +11,9 @@ export class HeaderComponent implements OnInit {
   constructor(public http: HttpService) { }
 
   ngOnInit() {
-    this.http.getCategories().subscribe((data) => {
-      console.log(data);
-    });
+    // this.http.getCategories().subscribe((data) => {
+    //   console.log(data);
+    // });
   }
 
 }

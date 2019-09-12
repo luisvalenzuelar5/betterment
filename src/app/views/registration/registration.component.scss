@@ -1,0 +1,18 @@
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+    align-items: center;
+
+    &__submit-button {
+        width: 40px;
+    }
+
+    &__field {
+        width: 800px;
+    }
+
+    &__check {
+        margin-bottom: 10px;
+    }
+}
