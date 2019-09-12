@@ -31,9 +31,69 @@
         Mentoring not only benefits the employee, but also the mentor, and will have positive long-term advantages for
         all involved!
       </p>
+      <p>
+          You only need one profile, BetterMENT is flexible, so that if you want to both mentor and be mentored, your
+          profile will reflect those preferences. Think about your strengths, and how your skills may benefit others.
+      </p>
       <p>Count on me- I want to be involved in BetterMENT as a</p>
       <mat-checkbox class="registration-form__check" formControlName="is_mentor">Mentor </mat-checkbox>
       <mat-checkbox class="registration-form__check" formControlName="is_mentee">Mentee</mat-checkbox>
+    </form>
+  </mat-step>
+
+  <mat-step>
+      <ng-template matStepLabel>Focus Areas</ng-template>
+      <form class="registration-form" [formGroup]="skillsForm">
+        <table mat-table [dataSource]="newUserInfo.categories" class="mat-elevation-z1 registration-form__skills-table skills-table">
+          <ng-container matColumnDef="focus">
+            <th mat-header-cell *matHeaderCellDef>Focus Area</th>
+            <td class="" mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="has_skill">
+            <th mat-header-cell *matHeaderCellDef>
+              Mentors:
+              The focus areas where I can add value are
+            </th>
+            <td class="skills-table__check" mat-cell *matCellDef="let element; let i = index">
+                <mat-checkbox [formControl]="getFormControl(skillsForm, i, 'has_skill')"></mat-checkbox>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="needs_skill">
+            <th mat-header-cell *matHeaderCellDef>
+                Mentees:
+                The focus areas that I am looking for support are
+            </th>
+            <td class="skills-table__check" mat-cell *matCellDef="let element; let i = index">
+              <mat-checkbox class="registration-form__check" [formControl]="getFormControl(skillsForm, i, 'needs_skill')"></mat-checkbox>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; let i = index; columns: displayedColumns;"></tr>
+        </table>
+      </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Availability</ng-template>
+    <form class="registration-form" [formGroup]="skillsForm">
+      <mat-form-field class="registration-form__field">
+        <input matInput  placeholder="Duration of Meetings (Hint: 30m, 1 hr, other)">
+      </mat-form-field>
+
+      <mat-form-field class="registration-form__field">
+        <input matInput placeholder="Preferred Day of the Week (Hint: M-F)">
+      </mat-form-field>
+
+      <mat-form-field class="registration-form__field">
+        <input matInput placeholder="Frequency of Engagement (Hint: weekly, monthly)">
+      </mat-form-field>
+
+      <mat-form-field class="registration-form__field">
+        <input matInput placeholder="Term of Engagement (Hint: one-off, 1mo, 3mo)
+        ">
+      </mat-form-field>
     </form>
   </mat-step>
 </mat-horizontal-stepper>

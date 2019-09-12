@@ -12,7 +12,7 @@ export class HttpService {
     this.api = environment.apiUrl;
    }
 
-  getCategories(): any {
+  getSkills(): any {
     return this.http.get(`${this.api}/categories`);
   }
 }

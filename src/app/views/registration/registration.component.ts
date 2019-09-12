@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
-import { User } from '../../interfaces/user';
+import { User, UserFactory, Skill, SkillFactory } from '../../interfaces/user';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-registration',
@@ -10,30 +11,35 @@ import { User } from '../../interfaces/user';
 })
 export class RegistrationComponent implements OnInit {
   registrationForm;
-  newUserInfo = {
-    first_name: '',
-    last_name: '',
-    email: '',
-    toast_masters: false,
-    women_of_republic: false,
-    role: '',
-    location: '',
-    is_mentor: false,
-    is_mentee: false,
-    photo: '' ,
-    badges: []
-  } as User;
+  skillsForm;
+  focusAreas: Skill[];
+  displayedColumns = ['focus', 'has_skill', 'needs_skill'];
+  newUserInfo = UserFactory();
 
-  constructor(private formBuilder: FormBuilder) {
-   }
+  constructor(private formBuilder: FormBuilder, private http: HttpService) {
+  }
 
   ngOnInit() {
-    console.log(this.newUserInfo);
+    this.newUserInfo.categories = SkillFactory();
     this.registrationForm = this.formBuilder.group(this.newUserInfo);
+    this.skillsForm = this.formBuilder.group(
+      this.newUserInfo.categories.map(
+        (skill) => this.formBuilder.group(skill)
+      )
+    );
+
+    console.log('cats');
+    console.log(this.newUserInfo.categories);
+    console.log(this.skillsForm);
+    debugger
   }
 
 
   onSubmit(formValue): void {
     console.log(formValue);
+  }
+
+  getFormControl(group, index, name) {
+    return group.get(`${index}.${name}`);
   }
 }

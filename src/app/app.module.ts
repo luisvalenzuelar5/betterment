@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTableModule } from '@angular/material/table';
 
 
 import { AppComponent } from './app.component';
@@ -39,6 +40,7 @@ import { RegistrationComponent } from './views/registration/registration.compone
     MatInputModule,
     MatStepperModule,
     MatCheckboxModule,
+    MatTableModule,
     BrowserAnimationsModule
   ],
   providers: [],
