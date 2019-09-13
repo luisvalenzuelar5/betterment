@@ -26,3 +26,14 @@
         z-index: 2;
     }
 }
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+
+    &__get-started,
+    &__login {
+        color: $white;
+        margin: 5px;
+    }
+}
