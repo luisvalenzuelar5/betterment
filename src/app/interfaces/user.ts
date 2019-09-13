@@ -11,6 +11,7 @@ export interface User {
     photo: any;
     badges: any;
     categories?: Skill[];
+    password?: string;
 }
 
 export interface Skill {
@@ -33,7 +34,8 @@ export const UserFactory = (): User => ({
     is_mentee: false,
     photo: '',
     badges: [],
-    categories: [] as Skill[]
+    categories: [] as Skill[],
+    password: ''
 });
 
 export const SkillFactory = (): Skill[] => ([
