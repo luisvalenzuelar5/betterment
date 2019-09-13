@@ -1,4 +1,7 @@
-.registration-form {
+@import '../../../colors.scss';
+
+.registration-form,
+.title {
     display: flex;
     flex-direction: column;
     padding: 0 100px;
@@ -22,5 +25,14 @@
 
     &__check {
         text-align: center;
+    }
+}
+
+.button-link {
+    margin: 5px;
+
+    a {
+        text-decoration: none;
+        color: $white;
     }
 }

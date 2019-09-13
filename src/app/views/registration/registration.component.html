@@ -19,8 +19,6 @@
       </mat-form-field>
       <mat-checkbox class="registration-form__check" formControlName="toast_masters">Toast Masters</mat-checkbox>
       <mat-checkbox class="registration-form__check" formControlName="women_of_republic">Women of Republic</mat-checkbox>
-
-      <button class="registration-form__submit-button" mat-raised-button color="accent" type="submit">Next</button>
     </form>
   </mat-step>
 
@@ -34,6 +32,12 @@
       <p>
           You only need one profile, BetterMENT is flexible, so that if you want to both mentor and be mentored, your
           profile will reflect those preferences. Think about your strengths, and how your skills may benefit others.
+      </p>
+      <p>
+        A mentor works with the mentee sharing their professional knowledge and providing guidance in the area(s) the mentee requested assistance that aligns with the mentor.
+      </p>
+      <p>
+        A Mentee clearly communicates to the Mentor the skills and knowledge they want to obtain during the mentoring meetings.
       </p>
       <p>Count on me- I want to be involved in BetterMENT as a</p>
       <mat-checkbox class="registration-form__check" formControlName="is_mentor">Mentor </mat-checkbox>
@@ -76,7 +80,8 @@
       </form>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Availability</ng-template>
+    <ng-template matStepLabel>Availability/Assignments</ng-template>
+    <h1 class="title">Availability</h1>
     <form class="registration-form" [formGroup]="skillsForm">
       <mat-form-field class="registration-form__field">
         <input matInput  placeholder="Duration of Meetings (Hint: 30m, 1 hr, other)">
@@ -94,6 +99,24 @@
         <input matInput placeholder="Term of Engagement (Hint: one-off, 1mo, 3mo)
         ">
       </mat-form-field>
+
+      <h1 class="title">Assignments</h1>
+      <p>In order to prepare for your first engagement, we encourage you to </p>
+      <ol>
+        <li>Watch this video <br>
+          <button class="button-link" mat-raised-button color="accent">
+              <a href="https://app.pluralsight.com/library/courses/how-to-be-great-mentor/table-of-contents">For Mentors</a>
+          </button>
+          <button class="button-link" mat-raised-button color="accent">
+            <a href="https://app.pluralsight.com/library/courses/how-to-be-great-mentee/table-of-contents">For Mentees</a>
+          </button>
+        </li>
+        <li>
+          <p>Compose your mission statement</p>
+          <p> Hint: this will convey your intention to your mentor or mentee</p>
+        </li>
+      </ol>
+      <button class="button-link" mat-raised-button color="accent">See My Reccomendations</button>
     </form>
   </mat-step>
 </mat-horizontal-stepper>
