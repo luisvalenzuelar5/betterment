@@ -1,39 +1,129 @@
-@import '../../../colors.scss';
+@import '../../../styles/mixins.scss';
+@import '../../../styles/colors.scss';
 
 .home {
-    padding: 0 100px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    &__image {
-        margin-bottom: 10px;
-    }
+  &__image {
+    background-image: url('../../../assets/images/open_business.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 520px;
+    width: 100%;
+  }
 
 }
 
 .image {
-    &__text-overlay {
-        position: absolute;
-        padding: 10px;
-        top: 100px;
-        left: 300px;
-        max-width: 700px;
-        color: $white;
-        background-color: rgba(0,0,0,0.5);
-        z-index: 2;
+
+  &__text-overlay {
+    background-color: transparent;
+    font-family: helvetica;
+    font-size: 24px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    max-width: 720px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 2px 0 black;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: white;
+
+    h1 {
+      margin-bottom: 0;
     }
+  }
+}
+
+.homepage-how {
+  background-color: #4B7FA2;
+  color: #ffffff;
+
+  p {
+    color: #ffffff;
+  }
+}
+
+.homepage-how,
+.homepage-sign-up {
+  @include wrapper;
+}
+
+.home__body {
+  @media only screen and (min-width: 600px) {
+    margin: 22px 0;
+  }
+
+
+  color: #5f6368;
+  margin: 0 10px 20px;
+  max-width: 950px;
+}
+
+.homepage-how .headline--4 {
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: .25px;
+  line-height: 1.5rem;
+
+  @media only screen and (min-width: 1000px) {
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.625rem;
+  }
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    &__get-started,
-    &__login {
-        color: $white;
-        margin: 5px;
-    }
+  &__get-started,
+  &__login {
+    color: $white;
+    margin: 5px;
+  }
+}
+
+.homepage-how {
+  background-color: #4B7FA2;
+  color: #ffffff;
+
+  p {
+    color: #ffffff;
+  }
+}
+
+.homepage-how,
+.homepage-sign-up {
+  @include wrapper;
+}
+
+.home__body {
+  @media only screen and (min-width: 600px) {
+    margin: 22px 0;
+  }
+
+
+  color: #5f6368;
+  margin: 0 10px 20px;
+  max-width: 950px;
+}
+
+.homepage-how .headline--4 {
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: .25px;
+  line-height: 1.5rem;
+
+  @media only screen and (min-width: 1000px) {
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.625rem;
+  }
 }

@@ -1,15 +1,46 @@
-<div class="home">
-  <div class="home__image image">
-    <img src="../../../assets/images/racoon.jpg">
-    <div class="image__text-overlay">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<header>
+  <div class="home">
+    <div class="home__image image">
+      <div class="image__text-overlay">
+        <h1 class="mat-display-1">Leveraging this portal will enable employee engagement and alliance in our multi-generational workforce.
+        </h1>
+      </div>
     </div>
   </div>
-  <div class="buttons">
-    <button class="buttons__get-started" mat-raised-button color="accent" routerLink="/registration" routerLinkActive="active">Get Started</button>
-    <button class="buttons__login" mat-raised-button color="accent" (click)="openLoginModal()">Login</button>
+</header>
+<div class="homepage-sign-up">
+  <div class="content container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center">
+    <div fxFlex="80" class="text-center">
+      <h2 class="headline--2">Create your profile today</h2>
+      <p class="headline--4 home__body">Bark on the journey to create meaningful connections and enrich your professional
+        development.</p>
+      <div class="buttons">
+          <button class="buttons__get-started" mat-raised-button color="accent" routerLink="/registration" routerLinkActive="active">Get Started</button>
+          <button class="buttons__login" mat-raised-button color="accent" (click)="openLoginModal()">Login</button>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="homepage-how">
+  <div class="content container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center">
+    <div fxFlex="40"><div class="card">
+      <img src="../../../assets/images/user-solid.png" alt="Mentor">
+    </div></div>
+    <div fxFlex="60">
+      <h2 class="headline--2">As a mentee</h2>
+      <p class="headline--4 home__body">Bark on the journey to create meaningful connections and enrich your professional
+        development.</p>
+    </div>
+  </div>
+  <div class="content container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center">
+    <div fxFlex="60">
+      <h2 class="headline--2">As a mentor</h2>
+      <p class="headline--4 home__body">Bark on the journey to create meaningful connections and enrich your professional
+        development.</p>
+    </div>
+    <div fxFlex="40"><div class="card">
+        <img src="../../../assets/images/user-tie-solid.png" alt="Mentee">
+        </div>
+    </div>
   </div>
 </div>
