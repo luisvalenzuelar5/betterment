@@ -1,0 +1,28 @@
+.mat-toolbar {
+  font-weight: 400;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  color: #004a7c;
+
+  .icon {
+    display: block;
+    border-radius: 3px;
+    border: 1px solid #E2E2E2;
+    background-color: #ffffff;
+    padding: 3px;
+    line-height: 1em;
+    margin-right: 5px;
+  }
+
+  .tagline {
+    font-size: .75em;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-style: italic;
+    color: #5f6368;
+  }
+}
