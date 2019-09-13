@@ -1,6 +1,10 @@
-<mat-toolbar class="mat-elevation-z6">
-  <span class="icon">
-    <img style="height: 20px; width: 20px;" alt="Republic Services" src="../../../assets/images/logo_rs.png">
-  </span>
-  Better<strong>MENT</strong> <span class="tagline">On-demand mentorship portal</span>
+<mat-toolbar class="mat-elevation-z6 toolbar" fxLayoutAlign="space-between">
+  <div fxLayout="row">
+    <span class="icon">
+      <img style="height: 20px; width: 20px;" alt="Republic Services" src="../../../assets/images/logo_rs.png">
+    </span>
+    Better<strong>MENT</strong> <span class="tagline">On-demand mentorship portal</span>
+  </div>
+
+  <button class="logout" mat-raised-button color="accent" (click)="logout(registrationForm.value)">Logout</button>
 </mat-toolbar>
