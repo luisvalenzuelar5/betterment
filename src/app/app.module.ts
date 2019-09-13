@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { RegistrationComponent } from './views/registration/registration.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { RegistrationComponent } from './views/registration/registration.compone
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,11 @@ import { RegistrationComponent } from './views/registration/registration.compone
     MatStepperModule,
     MatCheckboxModule,
     MatTableModule,
+    MatDialogModule,
     BrowserAnimationsModule
+  ],
+  entryComponents: [
+    LoginComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
