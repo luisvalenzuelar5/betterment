@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { User, UserFactory, Skill, SkillFactory } from '../../interfaces/user';
 import { HttpService } from 'src/app/services/http.service';
@@ -16,7 +17,9 @@ export class RegistrationComponent implements OnInit {
   displayedColumns = ['focus', 'has_skill', 'needs_skill'];
   newUserInfo = UserFactory();
 
-  constructor(private formBuilder: FormBuilder, private http: HttpService) {
+  constructor(private formBuilder: FormBuilder,
+              private http: HttpService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -27,15 +30,21 @@ export class RegistrationComponent implements OnInit {
         (skill) => this.formBuilder.group(skill)
       )
     );
-
-    console.log('cats');
-    console.log(this.newUserInfo.categories);
-    console.log(this.skillsForm);
   }
 
 
   onSubmit(formValue): void {
-    console.log(formValue);
+    const userToSave = formValue;
+
+    userToSave.categories = this.skillsForm.value;
+    console.log(userToSave);
+
+    this.http.registerUser(userToSave as User).subscribe((response) => {
+      console.log(response);
+      this.router.navigate(['/matches']);
+    }, err => {
+      console.log(err);
+    });
   }
 
   getFormControl(group, index, name) {

@@ -12,7 +12,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -21,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { RegistrationComponent } from './views/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
+import { MatchesComponent } from './components/matches/matches.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     HomeComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    MatchesComponent
   ],
   imports: [
     BrowserModule,
@@ -46,8 +48,9 @@ import { LoginComponent } from './components/login/login.component';
     MatCheckboxModule,
     MatTableModule,
     MatDialogModule,
+    FlexLayoutModule,
+    MatCardModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
   ],
   entryComponents: [
     LoginComponent

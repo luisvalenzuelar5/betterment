@@ -44,9 +44,9 @@ export const SkillFactory = (): Skill[] => ([
     { id: 5, name: 'Marketing', description: null, has_skill: false, needs_skill: false },
     { id: 6, name: 'Microsoft Office', description: null, has_skill: false, needs_skill: false },
     { id: 7, name: 'Organizational', description: null, has_skill: false, needs_skill: false },
-    { id: 8, name: 'Problem Solving', description: null, has_skill: false, needs_skill: false },
+    { id: 8, name: 'Problem-solving', description: null, has_skill: false, needs_skill: false },
     { id: 9, name: 'Project Management', description: null, has_skill: false, needs_skill: false },
     { id: 10, name: 'Team Leadership', description: null, has_skill: false, needs_skill: false },
-    { id: 11, name: 'Tehnical', description: null, has_skill: false, needs_skill: false }
+    { id: 11, name: 'Technical', description: null, has_skill: false, needs_skill: false }
 ]);
 

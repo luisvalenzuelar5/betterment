@@ -1,7 +1,7 @@
 <mat-horizontal-stepper [linear]="true" #stepper>
   <mat-step [stepControl]="registrationForm">
     <ng-template matStepLabel>User Registration</ng-template>
-    <form class="registration-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm.value)">
+    <form class="registration-form" [formGroup]="registrationForm">
       <mat-form-field class="registration-form__field">
         <input matInput formControlName="first_name" placeholder="First Name">
       </mat-form-field>
@@ -118,7 +118,7 @@
           <p> Hint: this will convey your intention to your mentor or mentee</p>
         </li>
       </ol>
-      <button class="button-link" mat-raised-button color="accent">See My Reccomendations</button>
+      <button class="button-link" mat-raised-button color="accent" (click)="onSubmit(registrationForm.value)">See My Recommendations</button>
     </form>
   </mat-step>
 </mat-horizontal-stepper>
