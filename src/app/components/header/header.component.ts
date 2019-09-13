@@ -13,17 +13,14 @@ export class HeaderComponent implements OnInit {
               private cookie: CookieService) { }
 
   ngOnInit() {
-    // this.http.getCategories().subscribe((data) => {
-    //   console.log(data);
-    // });
   }
 
   logout() {
     this.http.logout().subscribe((response) => {
       console.log(response);
-      debugger
       this.cookie.clearUser();
     }, err => {
+      this.cookie.clearUser();
       console.log(err);
     });
   }
