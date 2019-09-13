@@ -1,10 +1,11 @@
-<mat-toolbar class="mat-elevation-z6 toolbar" fxLayoutAlign="space-between">
-  <div fxLayout="row" (click)="navigateHome()">
+<mat-toolbar class="mat-elevation-z6 toolbar" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between" fxLayout="row">
+  <div (click)="navigateHome()" fxLayoutAlign="center center">
     <span class="icon">
       <img style="height: 20px; width: 20px;" alt="Republic Services" src="../../../assets/images/logo_rs.png">
     </span>
     Better<strong>MENT</strong> <span class="tagline">On-demand mentorship portal</span>
   </div>
-
-  <button class="logout" mat-raised-button color="accent" (click)="logout()">Logout</button>
+  <div fxLayoutAlign="center center">
+    <button class="logout" mat-raised-button color="accent" (click)="logout()">Logout</button>
+  </div>
 </mat-toolbar>

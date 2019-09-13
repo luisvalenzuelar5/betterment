@@ -1,0 +1,10 @@
+.buttons {
+  display: flex;
+  flex-direction: row;
+
+  &__get-started,
+  &__login,
+  &__logout {
+    margin: 5px;
+  }
+}

@@ -1,5 +1,6 @@
 @import '../../../styles/mixins.scss';
 @import '../../../styles/colors.scss';
+@import  '../../../styles/buttons.scss';
 
 .home {
   position: relative;
@@ -7,15 +8,35 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #00adef;
+  background-image: url('../../../assets/images/open_business.jpg');
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
 
-  &__image {
-    background-image: url('../../../assets/images/open_business.jpg');
-    background-size: cover;
-    background-position: center center;
-    min-height: 520px;
-    width: 100%;
+  .container {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
+  &__content {
+    background-color: #00adef;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #ffffff;
+    min-height: 520px;
+
+    h1 {
+      margin-bottom: 0;
+      margin-left: 0;
+      padding-left: 0;
+      font-weight: 900;
+    }
+
+    p {
+      color: #ffffff;
+    }
+  }
 }
 
 .image {
@@ -41,14 +62,7 @@
   }
 }
 
-.homepage-how {
-  background-color: #4B7FA2;
-  color: #ffffff;
 
-  p {
-    color: #ffffff;
-  }
-}
 
 .homepage-how,
 .homepage-sign-up {
@@ -79,24 +93,8 @@
   }
 }
 
-.buttons {
-  display: flex;
-  flex-direction: row;
-
-  &__get-started,
-  &__login {
-    color: $white;
-    margin: 5px;
-  }
-}
-
 .homepage-how {
-  background-color: #4B7FA2;
-  color: #ffffff;
-
-  p {
-    color: #ffffff;
-  }
+  background-color: #f7f7f8;
 }
 
 .homepage-how,
