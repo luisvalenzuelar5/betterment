@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 import { User, UserFactory, Skill, SkillFactory } from '../../interfaces/user';
 import { HttpService } from 'src/app/services/http.service';
-
+import { CookieService } from 'src/app/services/cookie.service';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -19,7 +19,8 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private http: HttpService,
-              private router: Router) {
+              private router: Router,
+              private cookie: CookieService) {
   }
 
   ngOnInit() {
@@ -41,6 +42,7 @@ export class RegistrationComponent implements OnInit {
 
     this.http.registerUser(userToSave as User).subscribe((response) => {
       console.log(response);
+      this.cookie.setKey('user', userToSave);
       this.router.navigate(['/matches']);
     }, err => {
       console.log(err);
