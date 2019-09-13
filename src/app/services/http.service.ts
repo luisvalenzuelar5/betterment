@@ -28,4 +28,8 @@ export class HttpService {
   logout() {
     return this.http.post(`${this.api}/logout`, {}, {});
   }
+
+  getMatches() {
+    return this.http.get(`${this.api}/users/matches`, {});
+  }
 }

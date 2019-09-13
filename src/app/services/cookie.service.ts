@@ -14,4 +14,8 @@ export class CookieService {
   setKey(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
   }
+
+  clearUser() {
+    localStorage.removeItem('user');
+  }
 }

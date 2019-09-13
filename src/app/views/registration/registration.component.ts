@@ -43,7 +43,7 @@ export class RegistrationComponent implements OnInit {
     this.http.registerUser(userToSave as User).subscribe((response) => {
       console.log(response);
       this.cookie.setKey('user', userToSave);
-      this.router.navigate(['/matches']);
+      this.router.navigate(['/recommendations']);
     }, err => {
       console.log(err);
     });
