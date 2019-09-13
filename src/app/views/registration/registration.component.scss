@@ -30,9 +30,17 @@
 
 .button-link {
     margin: 5px;
+    color: $white;
 
     a {
         text-decoration: none;
         color: $white;
     }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -32px;
 }
