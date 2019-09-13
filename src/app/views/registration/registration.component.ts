@@ -31,7 +31,6 @@ export class RegistrationComponent implements OnInit {
     console.log('cats');
     console.log(this.newUserInfo.categories);
     console.log(this.skillsForm);
-    debugger
   }
 
 
