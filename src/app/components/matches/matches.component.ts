@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./matches.component.scss']
 })
 export class MatchesComponent implements OnInit {
-
+  matches = [{}, {}, {}, {}, {}, {}];
   constructor() { }
 
   ngOnInit() {
