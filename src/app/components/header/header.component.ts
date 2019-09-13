@@ -17,7 +17,11 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    this.http.logout();
+    this.http.logout().subscribe((response) => {
+      console.log(response);
+    }, err => {
+      console.log(err);
+    });
   }
 
 }
