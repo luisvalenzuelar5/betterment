@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 import { CookieService } from 'src/app/services/cookie.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,8 @@ import { CookieService } from 'src/app/services/cookie.service';
 export class HeaderComponent implements OnInit {
 
   constructor(public http: HttpService,
-              private cookie: CookieService) { }
+              private cookie: CookieService,
+              private router: Router) { }
 
   ngOnInit() {
   }
@@ -25,4 +27,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  navigateHome() {
+    this.router.navigate(['/home']);
+  }
 }

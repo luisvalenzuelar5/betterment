@@ -13,9 +13,10 @@ export class MatchesComponent implements OnInit {
   ngOnInit() {
     this.http.getMatches().subscribe((response: any) => {
       this.matches = response;
+      console.log(response)
     }, err => {
       console.log(err);
-    })
+    });
   }
 
 }
