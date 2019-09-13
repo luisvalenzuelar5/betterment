@@ -1,21 +1,15 @@
 <div class="matches">
-  <mat-card class="matches__card" *ngFor="let match of matches">
+  <mat-card class="matches__card card" [ngClass]="{'selected': match.selected}" *ngFor="let match of matches" (click)="match.selected = !match.selected">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      <mat-card-title>{{match.first_name}} {{match.last_name}}</mat-card-title>
+      <mat-card-subtitle>{{match.email}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
     <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip color="primary" *ngFor="let skill of match.matched_categories">{{skill.name}}</mat-chip>
+        </mat-chip-list>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
   </mat-card>
 </div>

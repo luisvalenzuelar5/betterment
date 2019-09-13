@@ -29,7 +29,7 @@ export class HttpService {
     return this.http.post(`${this.api}/logout`, {}, {});
   }
 
-  getMatches() {
-    return this.http.get(`${this.api}/users/matches`, {});
+  getMatches(id) {
+    return this.http.get(`${this.api}/users/matches/${id}`, {});
   }
 }

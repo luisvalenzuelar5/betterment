@@ -13,6 +13,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -52,6 +53,7 @@ import { RecommendationsComponent } from './views/recommendations/recommendation
     MatDialogModule,
     FlexLayoutModule,
     MatCardModule,
+    MatChipsModule,
     BrowserAnimationsModule,
   ],
   entryComponents: [

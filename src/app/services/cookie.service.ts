@@ -8,7 +8,7 @@ export class CookieService {
   constructor() { }
 
   getKey(key) {
-    localStorage.getItem(key);
+    return localStorage.getItem(key);
   }
 
   setKey(key, value) {
@@ -17,5 +17,9 @@ export class CookieService {
 
   clearUser() {
     localStorage.removeItem('user');
+  }
+
+  getUserId() {
+    return JSON.parse(this.getKey('user')).id;
   }
 }
