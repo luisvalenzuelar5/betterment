@@ -1,0 +1,25 @@
+@mixin wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+@mixin p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+@mixin text-color {
+  color: rgba(0,0,0,.54);
+}
+
+@mixin h2 {
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0 0 16px;
+  padding: 0;
+}

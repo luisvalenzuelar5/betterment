@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import '~@angular/material/theming';
+
+$logo-icon: url(assets/icon-color.svg);
+$logo-text: url('assets/logo-color-aside.svg');
+
+$open-sans: 'Open Sans', sans-serif;
+$compass-font: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$compass-highlight: #fafdbd;
+$compass-background: #15325c;
+$compass-background-lite: #b0c4de;
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Primary palette
+$brand-palette: (
+  50: #e0e9ef,
+  100: #b3c9d8,
+  200: #80a5be,
+  300: #4d80a3,
+  400: #266590,
+  500: #004a7c,
+  600: #004374,
+  700: #003a69,
+  800: #00325f,
+  900: #00224c,
+  A100: #80acff,
+  A200: #4d8bff,
+  A400: #1a6aff,
+  A700: #0059ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+
+// Accent palette
+$brand-light-palette: (
+  50: #e0f5fd,
+  100: #b3e6fa,
+  200: #80d6f7,
+  300: #4dc6f4,
+  400: #26b9f1,
+  500: #00adef,
+  600: #00a6ed,
+  700: #009ceb,
+  800: #0093e8,
+  900: #0083e4,
+  A100: #ffffff,
+  A200: #d8ecff,
+  A400: #a5d4ff,
+  A700: #8bc8ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+// Warning palette
+$warning-palette: (
+  50: #f5e3e0,
+  100: #e6b9b3,
+  200: #d58a80,
+  300: #c45b4d,
+  400: #b73826,
+  500: #aa1500,
+  600: #a31200,
+  700: #990f00,
+  800: #900c00,
+  900: #7f0600,
+  A100: #ffadad,
+  A200: #ff7b7a,
+  A400: #ff4847,
+  A700: #ff2f2d,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://www.google.com/design/spec/style/color.html
+$betterment-app-primary: mat-palette($brand-palette);
+$betterment-app-accent: mat-palette($brand-light-palette);
+
+// The warn palette is optional (defaults to red).
+$betterment-app-warn: mat-palette($warning-palette);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$betterment-app-theme: mat-light-theme($betterment-app-primary, $betterment-app-accent, $betterment-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($betterment-app-theme);

@@ -1,0 +1,37 @@
+$grey-0: #f3f4f5;
+$grey-1: #e2e3e6;
+$grey-2: #cfd1d5;
+$grey-3: #bcbec4;
+$grey-4: #adb0b7;
+$grey-5: #9fa2aa;
+$grey-6: #979aa3;
+$grey-7: #8d9099;
+$grey-8: #838690;
+$grey-9: #72757f;
+
+$white: #ffffff;
+$black: #000000;
+$grey: $grey-5;
+
+$brand-background: #f9f9f9;
+$brand-tint: #1890e2;
+$brand: #004a7c;
+$brand-shade: #003254;
+$brand-light-tint: #a6e0f7;
+$brand-light: #00adef;
+$brand-light-shade: #006e98;
+$warning-tint: #ea796c;
+$warning: #ac1500;
+$warning-shade: #660a00;
+
+.warning-text {
+  color: $warning;
+
+  &--tint {
+    color: $warning-tint;
+  }
+
+  &--shade {
+    color: $warning-shade;
+  }
+}
