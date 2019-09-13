@@ -22,6 +22,7 @@ import { HomeComponent } from './views/home/home.component';
 import { RegistrationComponent } from './views/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
 import { MatchesComponent } from './components/matches/matches.component';
+import { RecommendationsComponent } from './views/recommendations/recommendations.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { MatchesComponent } from './components/matches/matches.component';
     HomeComponent,
     RegistrationComponent,
     LoginComponent,
-    MatchesComponent
+    MatchesComponent,
+    RecommendationsComponent
   ],
   imports: [
     BrowserModule,

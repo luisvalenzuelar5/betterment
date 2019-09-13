@@ -24,4 +24,8 @@ export class HttpService {
   login(data) {
     return this.http.post(`${this.api}/login`, data, {});
   }
+
+  logout() {
+    return this.http.post(`${this.api}/logout`, {}, {});
+  }
 }
